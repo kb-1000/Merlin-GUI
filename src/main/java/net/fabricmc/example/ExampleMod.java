@@ -14,9 +14,9 @@ public class ExampleMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger("modid");
 	public static final TestItem TEST_ITEM = new TestItem(new Item.Settings().group(ItemGroup.MATERIALS));
+
 	@Override
 	public void onInitialize() {
 		Registry.register(Registry.ITEM, new Identifier("modid", "test_item"),TEST_ITEM);
-		MerlinScreen.onClientCreation();
 	}
 }
